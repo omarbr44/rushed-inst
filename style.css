@@ -1,0 +1,126 @@
+
+  /* Resetters */
+*,*:before,*:after{
+
+    padding:0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    
+    }
+    input,textarea{
+    
+    outline:none
+    
+    }
+    input[type="submit"]{
+    cursor:pointer;    
+    }
+    
+    li,a{
+    text-decoration:none;
+    /* fonts styles */
+    }
+    .tajawal-extralight {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    .tajawal-regular {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .tajawal-bold {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    /* .swiper-slide-1 {
+      background-image: url('img/hero-img.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    } */
+    #accessibility-sidebar {
+      transition-property: left;
+      transition-duration: 0.4s;
+  }
+.checkbox-wrapper-6 .tgl {
+  display: none;
+}
+.checkbox-wrapper-6 .tgl,
+.checkbox-wrapper-6 .tgl:after,
+.checkbox-wrapper-6 .tgl:before,
+.checkbox-wrapper-6 .tgl *,
+.checkbox-wrapper-6 .tgl *:after,
+.checkbox-wrapper-6 .tgl *:before,
+.checkbox-wrapper-6 .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.checkbox-wrapper-6 .tgl::-moz-selection,
+.checkbox-wrapper-6 .tgl:after::-moz-selection,
+.checkbox-wrapper-6 .tgl:before::-moz-selection,
+.checkbox-wrapper-6 .tgl *::-moz-selection,
+.checkbox-wrapper-6 .tgl *:after::-moz-selection,
+.checkbox-wrapper-6 .tgl *:before::-moz-selection,
+.checkbox-wrapper-6 .tgl + .tgl-btn::-moz-selection,
+.checkbox-wrapper-6 .tgl::selection,
+.checkbox-wrapper-6 .tgl:after::selection,
+.checkbox-wrapper-6 .tgl:before::selection,
+.checkbox-wrapper-6 .tgl *::selection,
+.checkbox-wrapper-6 .tgl *:after::selection,
+.checkbox-wrapper-6 .tgl *:before::selection,
+.checkbox-wrapper-6 .tgl + .tgl-btn::selection {
+  background: none;
+}
+.checkbox-wrapper-6 .tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 3rem;
+  height: 1.3rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.checkbox-wrapper-6 .tgl + .tgl-btn:after,
+.checkbox-wrapper-6 .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+}
+.checkbox-wrapper-6 .tgl + .tgl-btn:after {
+  left: 0;
+}
+.checkbox-wrapper-6 .tgl + .tgl-btn:before {
+  display: none;
+}
+.checkbox-wrapper-6 .tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.checkbox-wrapper-6 .tgl-light + .tgl-btn {
+  border: 1px solid rgb(190, 48, 48);
+  border-radius: 2em;
+  padding: 1px;
+  transition: all 0.4s ease;
+}
+.checkbox-wrapper-6 .tgl-light + .tgl-btn:after {
+  border-radius: 50%;
+  background: rgb(218, 87, 87);
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-6 .tgl-light:checked + .tgl-btn:after {
+  background: white;
+}
+.checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
+  background: rgb(184, 24, 24);
+}

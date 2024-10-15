@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <nav class="lg:py-8 py-4 w-full fixed top-0 z-10" 
+    >
+    <div class="first-nav px-5 flex justify-between mb-5">
+        <div class="flex gap-5 sm:gap-2 items-center">
+            <button onclick="showHidemainMenu()" class="main-menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                  </svg>
+            </button>
+            <button class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>  
+            </button>
+            <div class="accessibility">
+                <button onclick="showHideSideBar()" class="accessibility-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd" />
+                      </svg>                      
+                </button>
+                <div id="accessibility-sidebar" class="fixed top-0 -left-[120%] h-screen w-80 sm:w-full pt-10 px-8 mb-5 bg-white">
+                    <h2 class="text-right mb-4 text-2xl text-bold">تخصيص</h2>
+                    <div class="flex justify-between items-center mb-8">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                          </svg>
+                        </div>
+                        <div class="font-sizes-container flex items-end gap-3">
+                            <span class="text-2xl font-semibold">A</span>
+                            <div class="w-px h-4 bg-black"></div>
+                            <span class="text-lg">A</span>
+                            <div class="w-px h-4 bg-black"></div>
+                            <span class="text-sm">A</span>
+                        </div>
+                        <button onclick="showHideSideBar()" class="px-3 py-1 rounded-full bg-red-500 text-red-950 translate-x-11">X</button>
+                    </div>
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="checkbox-wrapper-6">
+                            <input class="tgl tgl-light" id="cb1-6" type="checkbox"/>
+                            <label class="tgl-btn" for="cb1-6">
+                          </div>
+                        <div class="text-xl">القراءة الليلية</div>
+                    </div>
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                              </svg>                              
+                          </div>
+                        <div class="text-xl">جولة في الموقع</div>
+                    </div>
+                    <div class="flex justify-between flex-col mb-8">
+                        <div class="self-end text-xl">الموقع باللغة</div>
+                        <div class="self-start">
+                          <span class="border-r border-black pr-1">English</span>
+                          <span class="">English</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between flex-col mb-8">
+                        <div class="self-end text-xl">ترجمة هذه الصفحة</div>
+                        <div class="self-start">
+                          <span class="">English</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-right">معهد الرشد غير مسؤولة عن نتائج الترجمة الفورية الموفرة من جوجل</p>
+                    </div>
+                </div>
+            </div>         
+            <button class="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                  </svg>                  
+            </button>
+            <div class="lang-container">
+                <select name="lang" id="lang-select" class="py-2 px-8 sm:px-2 sm:text-sm border-black border" style="background: none;">
+                    <option value="BAHASA">BAHASA</option>
+                    <option value="english">English</option>
+                    <option value="arabic">العربية</option>
+                </select>
+            </div>
+            <!-- <div class="lang-container flex sm:w-fit flex-col gap-2">
+             <a href="" class="py-2 px-8 sm:px-2 sm:text-sm border-black border">BAHASA</a>
+             <a href="" class="py-2 px-8 sm:px-2 sm:text-sm border-black border">English</a>
+             <a href="" class="py-2 px-8 sm:px-2 sm:text-sm border-black border">العربية</a>
+            </div> -->
+        </div>
+        <div class="">
+         <a href="" class="">
+             <img src="img/logo.png" alt="logo" class="w-[180px] sm:w-28">
+         </a>
+        </div>
+    </div>
+    <div class="sec-nav px-5 flex gap-10 sm:gap-5 bg-white py-3 justify-center lg:justify-start">
+        <div class="flex sm:flex-col-reverse items-center gap-2">
+            <span class="text-center sm:text-sm">
+            اتصل بنا
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 sm:size-5">
+                <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 0 0-1.032-.211 50.89 50.89 0 0 0-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 0 0 2.433 3.984L7.28 21.53A.75.75 0 0 1 6 21v-4.03a48.527 48.527 0 0 1-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979Z" />
+                <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 0 0 1.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0 0 15.75 7.5Z" />
+            </svg>
+        </div>
+        <div class="flex gap-2 sm:flex-col-reverse items-center">
+            <span class="text-center sm:text-sm">
+            الاسئلة الشائعة
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>              
+        </div>
+        <div class="flex gap-2 sm:flex-col-reverse items-center">
+            <span class="text-center sm:text-sm">
+            المشاركة الرقمية
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+              </svg>                            
+        </div>
+        <div class="flex gap-2 sm:flex-col-reverse items-center">
+            <span class="text-center sm:text-sm">
+            البيانات المفتوحة
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+            </svg>                                         
+        </div>
+    </div>
+    </nav>
+    <section id="main-menu" class="h-screen fixed top-0 z-20 w-full bg-black opacity-60 -right-[120%] py-5 lg:px-36 md:px-20 sm:px-10">
+        <div class="main-menu-header flex justify-between text-white mb-8">
+            <button onclick="showHidemainMenu()" class="w-9 h-9 text-lg border rounded-full">x</button>
+            <a href="" class="bg-white p-2">
+                <img src="img/logo.png" alt="logo" width="180">
+            </a>
+        </div>
+        <div class="main-menu-content flex gap-10 justify-end text-white text-right">
+            <div class="flex gap-4">
+                <div class="main-menu-subitems flex flex-col gap-2">
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الرئيسية</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">عن المعهد</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">القبول</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الشؤون التعليمية</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الأنظمة</a>                </div>
+                <div class="w-px bg-white"></div>
+            </div>
+            <div class="main-menu-items flex flex-col gap-4">
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الرئيسية</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">عن المعهد</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">القبول</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الشؤون التعليمية</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الأنظمة</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">حياة المعهد</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">المنشورات</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">المركز الإعلامي</a>
+            </div>
+        </div>
+    </section>
+    <section class="hero-section h-screen relative w-full">
+        <div class="hero-bottom-menu absolute bottom-0 w-full z-[2]">
+            <div class="flex w-full text-white text-center mb-10 sm:hidden">
+                <div class="flex items-center justify-center py-5 w-[12.5%] bg-red-950 border-r">للتقديم</div>
+                <div class="flex items-center justify-center py-5 w-[12.5%] bg-red-950 border-r">عن المعهد</div>
+                <div class="flex items-center justify-center py-5 w-[12.5%] bg-red-950 border-r">المركز الإعلامي</div>
+                <div class="flex items-center justify-center py-5 w-[12.5%] bg-red-950 border-r">المنشورات</div>
+                <div class="flex items-center justify-center py-5 w-[12.5%] bg-red-950 border-r">حياة المعهد</div>
+                <div class="flex items-center justify-center py-5 w-[12.5%] bg-red-950 border-r">الأنظمة</div>
+                <div class="flex items-center justify-center py-5 w-[12.5%] bg-red-950 border-r">الشؤون التعليمية</div>
+                <div class="flex items-center justify-center py-5 w-[12.5%] bg-red-950">القبول</div>
+            </div>
+            <div class="news-section flex justify-evenly px-10 md:px-3 sm:px-[1px] mb-5">
+                <div class="news-container bg-red-950 text-white p-4 sm:px-1 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                    </svg>
+                    <h1 class="text-4xl md:text-2xl sm:text-sm font-bold">#110</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                </div>
+                <div class="news-container bg-red-950 text-white p-4 sm:px-1 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                    </svg>
+                    <h1 class="text-4xl md:text-2xl sm:text-sm font-bold">#110</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                </div>
+                <div class="news-container bg-red-950 text-white p-4 sm:px-1 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                    </svg>
+                    <h1 class="text-4xl md:text-2xl sm:text-sm font-bold">#110</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                </div>
+                <div class="news-container bg-red-950 text-white p-4 sm:px-1 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                    </svg>
+                    <h1 class="text-4xl md:text-2xl sm:text-sm font-bold">#110</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                </div>
+            </div>
+        </div>
+        <div class="hero-swiper absolute w-full h-full left-0 top-0">
+            <div class="swiper h-full">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide ">
+                    <img src="img/hero-img.jpg" alt="" class="w-full">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/hero-img.jpg" alt="" class="w-full">
+                  </div>
+        
+                </div>   
+              </div>
+        </div>
+    </section>
+</body>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+</script>
+</html>

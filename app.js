@@ -1,0 +1,46 @@
+// tailwind configuration
+tailwind.config = {
+    theme: {
+        extend: {
+            colors:{
+            "site-shapes": "#014c7d",
+            "site-text-primary": "#014c7d",
+            "site-text-secondary": "#596373",
+            }
+        },
+        fontFamily:{
+            Roboto: ["Roboto, sans-serif"],
+        },
+        container: {
+            padding: "0 0.5rem",
+        },
+        screens:{
+            sm: {'max': '640px'},
+            md: {'max': '1024px',
+                'min': '640px'} ,
+            lg: '1024px',
+        }
+},
+}
+    function showHideSideBar() {
+        let sideBar = document.querySelector('#accessibility-sidebar')
+        if(sideBar.classList.contains('left-0')) {
+            sideBar.classList.add('-left-[120%]')
+            sideBar.classList.remove('left-0')
+        }
+        else {
+            sideBar.classList.add('left-0')
+            sideBar.classList.remove('-left-[120%]')
+        }
+    }
+    function showHidemainMenu() {
+        let mainMenu = document.querySelector('#main-menu')
+        if(mainMenu.classList.contains('right-0')) {
+            mainMenu.classList.add('-right-[120%]')
+            mainMenu.classList.remove('right-0')
+        }
+        else {
+            mainMenu.classList.add('right-0')
+            mainMenu.classList.remove('-right-[120%]')
+        }
+    }
