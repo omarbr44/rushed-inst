@@ -3,9 +3,9 @@ tailwind.config = {
     theme: {
         extend: {
             colors:{
-            "site-shapes": "#014c7d",
-            "site-text-primary": "#014c7d",
-            "site-text-secondary": "#596373",
+            "site-green": "#075210",
+            "site-light-green": "#3aa636",
+            "site-brown": "#32140a",
             }
         },
         fontFamily:{
