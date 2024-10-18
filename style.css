@@ -122,6 +122,7 @@
 .checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
   background: rgb(184, 24, 24);
 }
+ /* Hero section styles*/
 .swiper-pagination {
   top: 80% !important;
   left: -25% !important;
@@ -147,8 +148,32 @@
 }
 .swiper-slide-active .hero-text {
   opacity: 1;
-  transform: translate(-50%,-50%) ;
+  transform: translate(-50%,-16%) ;
   transition-duration: 0.6s;
   transition-property: opacity transform;
-  
+}
+.hero-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #075210 105%);
+}
+
+/* News section styles */
+.news-content {
+  height: 20%;
+  transition-property: height background-color;
+  transition-duration: 0.6s;
+}
+.news:hover .news-content {
+  background-color:#075210a2 ;
+  height: 80%;
+}
+.swiper-button-prev,.swiper-button-next {
+  background-color: #075210 !important;
+  color: white !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 100%;
+  transform: translateY(-50px);
+}
+.swiper-button-prev::after,.swiper-button-next::after {
+  font-size: 1rem !important;
 }
