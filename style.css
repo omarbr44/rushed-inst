@@ -122,6 +122,30 @@
 .checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
   background: rgb(184, 24, 24);
 }
+/* change nav color wwhen scroll */
+@supports not (animation-timeline: scroll()) {
+  nav {
+    background: #3aa636;
+  }
+}
+@supports (animation-timeline: scroll()) { 
+  nav {
+    animation-name: changeColorAnimation;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-timeline: scroll();
+    animation-range: normal 25%;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes changeColorAnimation {
+    from {
+      background: none;
+    }
+    to {
+      background: #3aa636;
+    }
+  }
+}
  /* Hero section styles*/
 .swiper-pagination {
   top: 80% !important;
@@ -159,12 +183,20 @@
 /* News section styles */
 .news-content {
   height: 20%;
-  transition-property: height background-color;
+  transition-property: height background-color ;
   transition-duration: 0.6s;
 }
 .news:hover .news-content {
   background-color:#075210a2 ;
   height: 80%;
+}
+.content-hover-appearing {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.6s;
+}
+.news:hover .content-hover-appearing {
+  opacity: 1;
 }
 .swiper-button-prev,.swiper-button-next {
   background-color: #075210 !important;
@@ -176,4 +208,49 @@
 }
 .swiper-button-prev::after,.swiper-button-next::after {
   font-size: 1rem !important;
+}
+
+  /* reserch section */
+.research-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:#00000054;
+}
+@media(min-width:1024px) {
+  .research-image {
+    transition-property: width;
+    transition-duration: 0.5s;
+  }
+  .research-image:hover {
+    width: 66.66%;
+  }
+  .research-content {
+    transition-property: bottom;
+    transition-duration: 0.5s;
+  }
+  .research-image:hover .research-content {
+    bottom: 20%;
+  }
+}
+ /* members section */
+.members-content {
+  background-color: #f8f8f88a;
+  display: inline-block;
+  width: 80%;
+  bottom: 50px;
+  left: 20px;
+  padding: 30px;
+  backdrop-filter: blur(30px);
+}
+.members-show-more {
+  width: 100%;
+  transition-property: background-color color width;
+  transition-duration: 0.6s;
+}
+.members-show-more:hover {
+  background-color: white;
+  color: #32140a;
+  width: 110%;
 }
