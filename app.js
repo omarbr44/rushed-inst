@@ -6,6 +6,7 @@ tailwind.config = {
             "site-green": "#075210",
             "site-light-green": "#3aa636",
             "site-brown": "#32140a",
+            "site-footer": "#162735",
             }
         },
         fontFamily:{

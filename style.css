@@ -182,12 +182,13 @@
 .hero-section-hovered1 {
   padding: 0;
   height: 0;
+  width: 0;
   opacity: 0;
-  transition-property: opacity height padding;
-  transition-duration: 0.5s;
+  transition-property: opacity height width padding;
 }
 .hero-bottom-menu-link1:hover .hero-section-hovered1 {
   height: fit-content;
+  width: 100%;
   padding: 5rem;
   opacity: 1;
 }
@@ -267,13 +268,10 @@
   width: 110%;
 }
 .google-map {
-  padding-bottom: 50%;
   position: relative;
 }
 
 .google-map iframe {
-  height: 100%;
-  width: 100%;
   left: 0;
   top: 0;
   position: absolute;
