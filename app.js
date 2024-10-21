@@ -44,3 +44,14 @@ tailwind.config = {
             mainMenu.classList.remove('-right-[120%]')
         }
     }
+    function showLinks(index) {
+        let mainMenu = document.querySelector('#showLinks'+index)
+        if(mainMenu.classList.contains('h-0')) {
+            mainMenu.classList.add('h-fit')
+            mainMenu.classList.remove('h-0')
+        }
+        else {
+            mainMenu.classList.add('h-0')
+            mainMenu.classList.remove('h-fit')
+        }
+    }

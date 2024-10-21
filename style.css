@@ -179,6 +179,18 @@
 .hero-overlay {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #075210 105%);
 }
+.hero-section-hovered1 {
+  padding: 0;
+  height: 0;
+  opacity: 0;
+  transition-property: opacity height padding;
+  transition-duration: 0.5s;
+}
+.hero-bottom-menu-link1:hover .hero-section-hovered1 {
+  height: fit-content;
+  padding: 5rem;
+  opacity: 1;
+}
 
 /* News section styles */
 .news-content {
@@ -253,4 +265,20 @@
   background-color: white;
   color: #32140a;
   width: 110%;
+}
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.showLinks {
+  overflow-y: auto;
 }
