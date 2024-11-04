@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="app.js"></script>
 </head>
-<body class="overflow-x-hidden" style="font-family: Tajawal, sans-serif;">
+<body class="overflow-x-hidden" style="font-family: sans-serif; direction: rtl;">
     <nav class="lg:pt-3 pt-2 w-full fixed top-0 z-10" 
     >
     <div class="first-nav px-5 flex justify-between mb-5 text-white">
@@ -38,8 +38,8 @@
                         <path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd" />
                       </svg>                      
                 </button>
-                <div id="accessibility-sidebar" style="line-height: normal;" class="fixed top-0 -left-[120%] h-screen w-80 sm:w-full pt-10 px-8 mb-5 bg-white text-black">
-                    <h2 class="text-right mb-4 text-2xl text-bold">تخصيص</h2>
+                <div id="accessibility-sidebar" style="line-height: normal;" class="fixed top-0 -left-[120%] h-screen w-80 sm:w-full pt-10 px-8 mb-5 bg-white text-black z-50">
+                    <h2 class="text-left mb-4 text-2xl text-bold">Customize</h2>
                     <div class="flex justify-between items-center mb-8">
                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -60,7 +60,7 @@
                             <input class="tgl tgl-light" id="cb1-6" type="checkbox"/>
                             <label class="tgl-btn" for="cb1-6">
                           </div>
-                        <div class="text-xl">القراءة الليلية</div>
+                        <div class="text-xl">Night reading</div>
                     </div>
                     <div class="flex justify-between items-center mb-8">
                         <div class="">
@@ -68,23 +68,23 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
                               </svg>                              
                           </div>
-                        <div class="text-xl">جولة في الموقع</div>
+                        <div class="text-xl">Site tour</div>
                     </div>
                     <div class="flex justify-between flex-col mb-8">
-                        <div class="self-end text-xl">الموقع باللغة</div>
+                        <div class="self-end text-xl">The site is in the language</div>
                         <div class="self-start">
                           <span class="border-r border-black pr-1">English</span>
                           <span class="">English</span>
                         </div>
                     </div>
                     <div class="flex justify-between flex-col mb-8">
-                        <div class="self-end text-xl">ترجمة هذه الصفحة</div>
+                        <div class="self-end text-xl">Translate this page</div>
                         <div class="self-start">
                           <span class="">English</span>
                         </div>
                     </div>
                     <div>
-                        <p class="text-right">معهد الرشد غير مسؤولة عن نتائج الترجمة الفورية الموفرة من جوجل</p>
+                        <p class="text-left">Al Rushd Institute is not responsible for the results of instant translation provided by Google</p>
                     </div>
                 </div>
             </div>         
@@ -96,8 +96,8 @@
             <div class="lang-container">
                 <select name="lang" id="lang-select" onchange="location = this.value;" class="py-2 px-8 sm:px-2 sm:text-sm border-white border rounded-md" style="background: none;">
                     <option class="text-black" value="BAHASA">BAHASA</option>
-                    <option class="text-black" value="index-en.html">English</option>
-                    <option class="text-black" value="arabic">العربية</option>
+                    <option class="text-black" value="english">English</option>
+                    <option class="text-black" value="index.html">العربية</option>
                 </select>
             </div>
         </div>
@@ -112,7 +112,7 @@
     <div class="sec-nav px-5 flex gap-10 sm:gap-5 py-3 justify-center lg:justify-start text-white" style="background: rgba(0, 0, 0, 0.226);">
         <div class="flex sm:flex-col-reverse items-center gap-2">
             <a href="" class="text-center sm:text-sm">
-            اتصل بنا
+            Contact us
             </a>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 sm:size-5">
                 <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 0 0-1.032-.211 50.89 50.89 0 0 0-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 0 0 2.433 3.984L7.28 21.53A.75.75 0 0 1 6 21v-4.03a48.527 48.527 0 0 1-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979Z" />
@@ -121,7 +121,7 @@
         </div>
         <div class="flex gap-2 sm:flex-col-reverse items-center">
             <a href="" class="text-center sm:text-sm">
-            الاسئلة الشائعة
+            Frequently asked questions
             </a>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
@@ -129,7 +129,7 @@
         </div>
         <div class="flex gap-2 sm:flex-col-reverse items-center">
             <a href="" class="text-center sm:text-sm">
-            المشاركة الرقمية
+            Digital participation
             </a>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
@@ -137,7 +137,7 @@
         </div>
         <div class="flex gap-2 sm:flex-col-reverse items-center">
             <a href="" class="text-center sm:text-sm">
-            البيانات المفتوحة
+            Open data
             </a>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
@@ -152,30 +152,30 @@
                 <img src="img/logo.png" alt="logo" width="180">
             </a>
         </div>
-        <div class="main-menu-content flex gap-10 justify-end text-white text-right">
+        <div class="main-menu-content flex gap-10 justify-end text-white text-left">
             <div class="flex gap-4">
                 <div class="main-menu-subitems flex flex-col gap-2">
-                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الرئيسية</a>
-                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">عن المعهد</a>
-                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">القبول</a>
-                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الشؤون التعليمية</a>
-                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الأنظمة</a>                </div>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">Home</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">About the institute</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">Acceptance</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">Educational affairs</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">Systems</a>                </div>
                 <div class="w-px bg-white"></div>
             </div>
             <div class="main-menu-items flex flex-col gap-4">
-                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الرئيسية</a>
-                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">عن المعهد</a>
-                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">القبول</a>
-                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الشؤون التعليمية</a>
-                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الأنظمة</a>
-                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">حياة المعهد</a>
-                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">المنشورات</a>
-                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">المركز الإعلامي</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">Home</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">About the institute</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">Acceptance</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">Educational affairs</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">Systems</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">Institute life</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">Publications</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">Media Center</a>
             </div>
         </div>
     </section>
     <section class="hero-section h-screen relative w-full">
-        <div class="social-media-container sm:hidden flex flex-col gap-6 items-center absolute top-1/2 right-12 -translate-y-1/2 z-20 ">
+        <div class="social-media-container sm:hidden flex flex-col gap-6 items-center absolute top-1/2 left-12 -translate-y-1/2 z-20 ">
             <div class="w-[2px] h-6 bg-white"></div>
             <a href="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 32 32"><path d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z"></path></svg>
@@ -198,131 +198,131 @@
         <div class="hero-bottom-menu absolute bottom-0 w-full z-[11]">
             <div class="flex w-full text-white text-center sm:hidden">
                 <a href="" class="relative flex items-center justify-center py-8 w-[12.5%] bg-site-brown text-lg font-bold border-r">
-                    <span>للتقديم</span>
+                    <span>to submit</span>
                 </a>
                 <div class="hero-bottom-menu-link1 flex items-center justify-center py-8 w-[12.5%] bg-site-light-green text-lg font-bold border-r">
-                    <a href="">عن المعهد</a>
+                    <a href="">About the institute</a>
                     <div class="hero-section-hovered1 absolute left-0 bottom-20 bg-white flex">
                         <div class="w-[70%] flex gap-10 p-4">
-                            <p class="text-site-brown text-right w-[65%]">
-                                مرحبا بكم في جامعة الإمارات العربية المتحدة - أول جامعة وطنية شاملة في الإمارات العربية المتحدة. تأسست جامعة الإمارات العربية المتحدة في عام 1976 بقرار من المغفور له بإذن الله الشيخ زايد بن سلطان آل نهيان طيب الله ثراه، وتطمح إلى أن تكون جامعة بحثية شاملة. يبلغ عدد الطلبة المسجلين في الجامعة حاليا ما يقارب 13,000 طالب إماراتي ودولي.
+                            <p class="text-site-brown text-left w-[65%]">
+                                Welcome to the United Arab Emirates University - the first comprehensive national university in the United Arab Emirates. The United Arab Emirates University was established in 1976 by a decision of the late Sheikh Zayed bin Sultan Al Nahyan, may God have mercy on him, and it aspires to be a comprehensive research university. The number of students currently enrolled at the university is approximately 13,000 Emirati and international students.
                             </p>
                             <img src="img/members2.jpg" alt="img" class="w-[35%] h-44">
                         </div>
-                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-right">
-                            <h1 class="text-4xl font-bold text-site-brown mb-6">عن الجامعة</h1>
-                            <a class="mb-3" href="">نظرة عامة</a>
-                            <a class="mb-3" href="">مؤشر نجاحات الطلبة</a>
-                            <a class="mb-3" href="">وحدة الاتصال الدولي</a>
-                            <a href="">الخريجون</a>
+                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-left">
+                            <h1 class="text-4xl font-bold text-site-brown mb-6">About the university</h1>
+                            <a class="mb-3" href="">Overview</a>
+                            <a class="mb-3" href="">Student success index</a>
+                            <a class="mb-3" href="">International Communication Unit</a>
+                            <a href="">Graduates</a>
                         </div>
                     </div>
                 </div>
                 <div class="hero-bottom-menu-link1 flex items-center justify-center py-8 w-[12.5%] bg-site-light-green text-lg font-bold border-r">
-                    <a href="">المنشورات</a>
+                    <a href="">Publications</a>
                     <div class="hero-section-hovered1 absolute left-0 bottom-20 bg-white flex">
                         <div class="w-[70%] flex gap-10 p-4">
-                            <p class="text-site-brown text-right w-[65%]">
-                                مرحبا بكم في جامعة الإمارات العربية المتحدة - أول جامعة وطنية شاملة في الإمارات العربية المتحدة. تأسست جامعة الإمارات العربية المتحدة في عام 1976 بقرار من المغفور له بإذن الله الشيخ زايد بن سلطان آل نهيان طيب الله ثراه، وتطمح إلى أن تكون جامعة بحثية شاملة. يبلغ عدد الطلبة المسجلين في الجامعة حاليا ما يقارب 13,000 طالب إماراتي ودولي.
+                            <p class="text-site-brown text-left w-[65%]">
+                                Welcome to the United Arab Emirates University - the first comprehensive national university in the United Arab Emirates. The United Arab Emirates University was established in 1976 by a decision of the late Sheikh Zayed bin Sultan Al Nahyan, may God have mercy on him, and it aspires to be a comprehensive research university. The number of students currently enrolled at the university is approximately 13,000 Emirati and international students.
                             </p>
                             <img src="img/members2.jpg" alt="img" class="w-[35%] h-44">
                         </div>
-                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-right">
-                            <h1 class="text-4xl font-bold text-site-brown mb-6">عن الجامعة</h1>
-                            <a class="mb-3" href="">نظرة عامة</a>
-                            <a class="mb-3" href="">مؤشر نجاحات الطلبة</a>
-                            <a class="mb-3" href="">وحدة الاتصال الدولي</a>
-                            <a href="">الخريجون</a>
+                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-left">
+                            <h1 class="text-4xl font-bold text-site-brown mb-6">About the university</h1>
+                            <a class="mb-3" href="">Overview</a>
+                            <a class="mb-3" href="">Student success index</a>
+                            <a class="mb-3" href="">International Communication Unit</a>
+                            <a href="">Graduates</a>
                         </div>
                     </div>
                 </div>
                 <div class="hero-bottom-menu-link1 flex items-center justify-center py-8 w-[12.5%] bg-site-light-green text-lg font-bold border-r">
-                    <a href="">المركز الإعلامي</a>
+                    <a href="">Media center</a>
                     <div class="hero-section-hovered1 absolute left-0 bottom-20 bg-white flex">
                         <div class="w-[70%] flex gap-10 p-4">
-                            <p class="text-site-brown text-right w-[65%]">
-                                مرحبا بكم في جامعة الإمارات العربية المتحدة - أول جامعة وطنية شاملة في الإمارات العربية المتحدة. تأسست جامعة الإمارات العربية المتحدة في عام 1976 بقرار من المغفور له بإذن الله الشيخ زايد بن سلطان آل نهيان طيب الله ثراه، وتطمح إلى أن تكون جامعة بحثية شاملة. يبلغ عدد الطلبة المسجلين في الجامعة حاليا ما يقارب 13,000 طالب إماراتي ودولي.
+                            <p class="text-site-brown text-left w-[65%]">
+                                Welcome to the United Arab Emirates University - the first comprehensive national university in the United Arab Emirates. The United Arab Emirates University was established in 1976 by a decision of the late Sheikh Zayed bin Sultan Al Nahyan, may God have mercy on him, and it aspires to be a comprehensive research university. The number of students currently enrolled at the university is approximately 13,000 Emirati and international students.
                             </p>
                             <img src="img/members2.jpg" alt="img" class="w-[35%] h-44">
                         </div>
-                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-right">
-                            <h1 class="text-4xl font-bold text-site-brown mb-6">عن الجامعة</h1>
-                            <a class="mb-3" href="">نظرة عامة</a>
-                            <a class="mb-3" href="">مؤشر نجاحات الطلبة</a>
-                            <a class="mb-3" href="">وحدة الاتصال الدولي</a>
-                            <a href="">الخريجون</a>
+                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-left">
+                            <h1 class="text-4xl font-bold text-site-brown mb-6">About the university</h1>
+                            <a class="mb-3" href="">Overview</a>
+                            <a class="mb-3" href="">Student success index</a>
+                            <a class="mb-3" href="">International Communication Unit</a>
+                            <a href="">Graduates</a>
                         </div>
                     </div>
                 </div>
                 <div class="hero-bottom-menu-link1 flex items-center justify-center py-8 w-[12.5%] bg-site-light-green text-lg font-bold border-r">
-                    <a href="">حياة المعهد</a>
+                    <a href="">Institute life</a>
                     <div class="hero-section-hovered1 absolute left-0 bottom-20 bg-white flex">
                         <div class="w-[70%] flex gap-10 p-4">
-                            <p class="text-site-brown text-right w-[65%]">
-                                مرحبا بكم في جامعة الإمارات العربية المتحدة - أول جامعة وطنية شاملة في الإمارات العربية المتحدة. تأسست جامعة الإمارات العربية المتحدة في عام 1976 بقرار من المغفور له بإذن الله الشيخ زايد بن سلطان آل نهيان طيب الله ثراه، وتطمح إلى أن تكون جامعة بحثية شاملة. يبلغ عدد الطلبة المسجلين في الجامعة حاليا ما يقارب 13,000 طالب إماراتي ودولي.
+                            <p class="text-site-brown text-left w-[65%]">
+                                Welcome to the United Arab Emirates University - the first comprehensive national university in the United Arab Emirates. The United Arab Emirates University was established in 1976 by a decision of the late Sheikh Zayed bin Sultan Al Nahyan, may God have mercy on him, and it aspires to be a comprehensive research university. The number of students currently enrolled at the university is approximately 13,000 Emirati and international students.
                             </p>
                             <img src="img/members2.jpg" alt="img" class="w-[35%] h-44">
                         </div>
-                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-right">
-                            <h1 class="text-4xl font-bold text-site-brown mb-6">عن الجامعة</h1>
-                            <a class="mb-3" href="">نظرة عامة</a>
-                            <a class="mb-3" href="">مؤشر نجاحات الطلبة</a>
-                            <a class="mb-3" href="">وحدة الاتصال الدولي</a>
-                            <a href="">الخريجون</a>
+                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-left">
+                            <h1 class="text-4xl font-bold text-site-brown mb-6">About the university</h1>
+                            <a class="mb-3" href="">Overview</a>
+                            <a class="mb-3" href="">Student success index</a>
+                            <a class="mb-3" href="">International Communication Unit</a>
+                            <a href="">Graduates</a>
                         </div>
                     </div>
                 </div>
                 <div class="hero-bottom-menu-link1 flex items-center justify-center py-8 w-[12.5%] bg-site-light-green text-lg font-bold border-r">
-                    <a href="">الأنظمة</a>
+                    <a href="">Systems</a>
                     <div class="hero-section-hovered1 absolute left-0 bottom-20 bg-white flex">
                         <div class="w-[70%] flex gap-10 p-4">
-                            <p class="text-site-brown text-right w-[65%]">
-                                مرحبا بكم في جامعة الإمارات العربية المتحدة - أول جامعة وطنية شاملة في الإمارات العربية المتحدة. تأسست جامعة الإمارات العربية المتحدة في عام 1976 بقرار من المغفور له بإذن الله الشيخ زايد بن سلطان آل نهيان طيب الله ثراه، وتطمح إلى أن تكون جامعة بحثية شاملة. يبلغ عدد الطلبة المسجلين في الجامعة حاليا ما يقارب 13,000 طالب إماراتي ودولي.
+                            <p class="text-site-brown text-left w-[65%]">
+                                Welcome to the United Arab Emirates University - the first comprehensive national university in the United Arab Emirates. The United Arab Emirates University was established in 1976 by a decision of the late Sheikh Zayed bin Sultan Al Nahyan, may God have mercy on him, and it aspires to be a comprehensive research university. The number of students currently enrolled at the university is approximately 13,000 Emirati and international students.
                             </p>
                             <img src="img/members2.jpg" alt="img" class="w-[35%] h-44">
                         </div>
-                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-right">
-                            <h1 class="text-4xl font-bold text-site-brown mb-6">عن الجامعة</h1>
-                            <a class="mb-3" href="">نظرة عامة</a>
-                            <a class="mb-3" href="">مؤشر نجاحات الطلبة</a>
-                            <a class="mb-3" href="">وحدة الاتصال الدولي</a>
-                            <a href="">الخريجون</a>
+                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-left">
+                            <h1 class="text-4xl font-bold text-site-brown mb-6">About the university</h1>
+                            <a class="mb-3" href="">Overview</a>
+                            <a class="mb-3" href="">Student success index</a>
+                            <a class="mb-3" href="">International Communication Unit</a>
+                            <a href="">Graduates</a>
                         </div>
                     </div>
                 </div>
                 <div class="hero-bottom-menu-link1 flex items-center justify-center py-8 w-[12.5%] bg-site-light-green text-lg font-bold border-r">
-                    <a href="">الشؤون التعليمية</a>
+                    <a href="">Educational affairs</a>
                     <div class="hero-section-hovered1 absolute left-0 bottom-20 bg-white flex">
                         <div class="w-[70%] flex gap-10 p-4">
-                            <p class="text-site-brown text-right w-[65%]">
-                                مرحبا بكم في جامعة الإمارات العربية المتحدة - أول جامعة وطنية شاملة في الإمارات العربية المتحدة. تأسست جامعة الإمارات العربية المتحدة في عام 1976 بقرار من المغفور له بإذن الله الشيخ زايد بن سلطان آل نهيان طيب الله ثراه، وتطمح إلى أن تكون جامعة بحثية شاملة. يبلغ عدد الطلبة المسجلين في الجامعة حاليا ما يقارب 13,000 طالب إماراتي ودولي.
+                            <p class="text-site-brown text-left w-[65%]">
+                                Welcome to the United Arab Emirates University - the first comprehensive national university in the United Arab Emirates. The United Arab Emirates University was established in 1976 by a decision of the late Sheikh Zayed bin Sultan Al Nahyan, may God have mercy on him, and it aspires to be a comprehensive research university. The number of students currently enrolled at the university is approximately 13,000 Emirati and international students.
                             </p>
                             <img src="img/members2.jpg" alt="img" class="w-[35%] h-44">
                         </div>
-                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-right">
-                            <h1 class="text-4xl font-bold text-site-brown mb-6">عن الجامعة</h1>
-                            <a class="mb-3" href="">نظرة عامة</a>
-                            <a class="mb-3" href="">مؤشر نجاحات الطلبة</a>
-                            <a class="mb-3" href="">وحدة الاتصال الدولي</a>
-                            <a href="">الخريجون</a>
+                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-left">
+                            <h1 class="text-4xl font-bold text-site-brown mb-6">About the university</h1>
+                            <a class="mb-3" href="">Overview</a>
+                            <a class="mb-3" href="">Student success index</a>
+                            <a class="mb-3" href="">International Communication Unit</a>
+                            <a href="">Graduates</a>
                         </div>
                     </div>
                 </div>
                 <div class="hero-bottom-menu-link1 flex items-center justify-center py-8 w-[12.5%] bg-site-light-green text-lg font-bold border-r">
-                    <a href="">القبول</a>
+                    <a href="">Acceptance</a>
                     <div class="hero-section-hovered1 absolute left-0 bottom-20 bg-white flex">
                         <div class="w-[70%] flex gap-10 p-4">
-                            <p class="text-site-brown text-right w-[65%]">
-                                مرحبا بكم في جامعة الإمارات العربية المتحدة - أول جامعة وطنية شاملة في الإمارات العربية المتحدة. تأسست جامعة الإمارات العربية المتحدة في عام 1976 بقرار من المغفور له بإذن الله الشيخ زايد بن سلطان آل نهيان طيب الله ثراه، وتطمح إلى أن تكون جامعة بحثية شاملة. يبلغ عدد الطلبة المسجلين في الجامعة حاليا ما يقارب 13,000 طالب إماراتي ودولي.
+                            <p class="text-site-brown text-left w-[65%]">
+                                Welcome to the United Arab Emirates University - the first comprehensive national university in the United Arab Emirates. The United Arab Emirates University was established in 1976 by a decision of the late Sheikh Zayed bin Sultan Al Nahyan, may God have mercy on him, and it aspires to be a comprehensive research university. The number of students currently enrolled at the university is approximately 13,000 Emirati and international students.
                             </p>
                             <img src="img/members2.jpg" alt="img" class="w-[35%] h-44">
                         </div>
-                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-right">
-                            <h1 class="text-4xl font-bold text-site-brown mb-6">عن الجامعة</h1>
-                            <a class="mb-3" href="">نظرة عامة</a>
-                            <a class="mb-3" href="">مؤشر نجاحات الطلبة</a>
-                            <a class="mb-3" href="">وحدة الاتصال الدولي</a>
-                            <a href="">الخريجون</a>
+                        <div class="text-site-brown w-[30%] px-4 flex flex-col justify-end border-l border-site-brown text-left">
+                            <h1 class="text-4xl font-bold text-site-brown mb-6">About the university</h1>
+                            <a class="mb-3" href="">Overview</a>
+                            <a class="mb-3" href="">Student success index</a>
+                            <a class="mb-3" href="">International Communication Unit</a>
+                            <a href="">Graduates</a>
                         </div>
                     </div>
                 </div>
@@ -332,34 +332,34 @@
         <div class="hero-swiper absolute w-full h-full left-0 top-0">
             <div class="swiper3 h-full">
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper text-right">
+                <div class="swiper-wrapper text-left">
                   <!-- Slides -->
                   <div class="swiper-slide ">
                     <img src="img/swipe-img1.jpg" alt="" class="w-full h-full brightness-90">
                     <div class="hero-overlay w-full h-screen absolute top-0" ></div>
                     <div class="hero-text hero-text-container absolute top-1/2 left-1/2 w-[80%]  overflow-hidden">
-                        <h1 class="text-6xl md:text-4x sm:text-2xl font-medium text-white">يمكنك الوصول إلى بوابة الخدمات الخاصة بجامعة الإمارات وتطبيق الهاتف المحمول </h1>
+                        <h1 class="text-6xl md:text-4x sm:text-2xl font-medium text-white">You can access the UAEU services portal and mobile application</h1>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <img src="img/swipe-img2.jpg" alt="" class="w-full h-full brightness-90">
                     <div class="hero-overlay w-full h-screen absolute top-0" ></div>
                     <div class="hero-text hero-text-container absolute top-1/2 left-1/2 w-[80%] overflow-hidden">
-                        <h1 class="text-6xl md:text-4x sm:text-2xl font-medium text-white">يمكنك الوصول إلى بوابة الخدمات الخاصة بجامعة الإمارات وتطبيق الهاتف المحمول </h1>
+                        <h1 class="text-6xl md:text-4x sm:text-2xl font-medium text-white">You can access the UAEU services portal and mobile application</h1>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <img src="img/swipe-img3.jpg" alt="" class="w-full h-full brightness-90">
                     <div class="hero-overlay w-full h-screen absolute top-0" ></div>
                     <div class="hero-text hero-text-container absolute top-1/2 left-1/2 w-[80%] overflow-hidden">
-                        <h1 class="text-6xl md:text-4x sm:text-2xl font-medium text-white">يمكنك الوصول إلى بوابة الخدمات الخاصة بجامعة الإمارات وتطبيق الهاتف المحمول </h1>
+                        <h1 class="text-6xl md:text-4x sm:text-2xl font-medium text-white">You can access the UAEU services portal and mobile application</h1>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <img src="img/swipe-img4.jpg" alt="" class="w-full h-full brightness-90">
                     <div class="hero-overlay w-full h-screen absolute top-0" ></div>
                     <div class="hero-text hero-text-container absolute top-1/2 left-1/2 w-[80%] overflow-hidden">
-                        <h1 class="text-6xl md:text-4x sm:text-2xl font-medium text-white">يمكنك الوصول إلى بوابة الخدمات الخاصة بجامعة الإمارات وتطبيق الهاتف المحمول </h1>
+                        <h1 class="text-6xl md:text-4x sm:text-2xl font-medium text-white">You can access the UAEU services portal and mobile application</h1>
                     </div>
                   </div>
                 </div>  
@@ -368,13 +368,13 @@
         </div>
     </section>
     <section class="news-section my-10">
-        <h1 class="text-center text-5xl font-bold my-8">اخر الأخبار</h1>
+        <h1 class="text-center text-5xl font-bold my-8">latest news</h1>
         <!-- <div class="news-container justify-evenly flex sm:hidden">
             <div class="news relative w-[25%] h-[500px]" style="background-image: url(img/news1.jpg);background-repeat: no-repeat;background-size: cover;">
-                <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                     <div class="content-appearing mb-10">
-                        <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                        <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                        <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                        <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                     </div>
                     <div class="content-hover-appearing">
                         <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
@@ -383,10 +383,10 @@
                 </div>
             </div>
             <div class="news relative w-[25%] h-[500px]" style="background-image: url(img/news3.jpg);background-repeat: no-repeat;background-size: cover;">
-                <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                     <div class="content-appearing mb-10">
-                        <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                        <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                        <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                        <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                     </div>
                     <div class="content-hover-appearing">
                         <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
@@ -395,10 +395,10 @@
                 </div>
             </div>
             <div class="news relative w-[25%] h-[500px]" style="background-image: url(img/news2.jpg);background-repeat: no-repeat;background-size: cover;">
-                <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                     <div class="content-appearing mb-10">
-                        <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                        <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                        <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                        <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                     </div>
                     <div class="content-hover-appearing">
                         <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
@@ -413,84 +413,84 @@
               <!-- Slides -->
               <a href="news-content.html" class="swiper-slide">
                 <div class="news mx-auto relative w-[70%] h-[500px]" style="background-image: url(img/news1.jpg);background-repeat: no-repeat;background-size: cover;">
-                    <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                    <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                         <div class="content-appearing mb-10">
-                            <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                            <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                            <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                            <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                         </div>
                         <div class="content-hover-appearing">
-                            <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
-                                للمنتدى الدولي للاتصال الحكومي 2024،</p>
+                            <p class="text-base text-white">The United Arab Emirates University launched the “University Challenge 2024” as a proactive initiative
+For the International Government Communication Forum 2024,</p>
                         </div>
                     </div>
                 </div>
               </a>
               <a href="news.html" class="swiper-slide">
                 <div class="news mx-auto relative w-[70%] h-[500px]" style="background-image: url(img/news3.jpg);background-repeat: no-repeat;background-size: cover;">
-                    <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                    <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                         <div class="content-appearing mb-10">
-                            <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                            <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                            <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                            <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                         </div>
                         <div class="content-hover-appearing">
-                            <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
-                                للمنتدى الدولي للاتصال الحكومي 2024،</p>
+                            <p class="text-base text-white">The United Arab Emirates University launched the “University Challenge 2024” as a proactive initiative
+For the International Government Communication Forum 2024,</p>
                         </div>
                     </div>
                 </div>
             </a>
               <a href="news-content.html" class="swiper-slide">
                 <div class="news mx-auto relative w-[70%] h-[500px]" style="background-image: url(img/news2.jpg);background-repeat: no-repeat;background-size: cover;">
-                    <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                    <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                         <div class="content-appearing mb-10">
-                            <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                            <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                            <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                            <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                         </div>
                         <div class="content-hover-appearing">
-                            <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
-                                للمنتدى الدولي للاتصال الحكومي 2024،</p>
+                            <p class="text-base text-white">The United Arab Emirates University launched the “University Challenge 2024” as a proactive initiative
+For the International Government Communication Forum 2024,</p>
                         </div>
                     </div>
                 </div>
             </a>
               <a href="news.html" class="swiper-slide">
                 <div class="news mx-auto relative w-[70%] h-[500px]" style="background-image: url(img/news1.jpg);background-repeat: no-repeat;background-size: cover;">
-                    <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                    <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                         <div class="content-appearing mb-10">
-                            <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                            <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                            <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                            <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                         </div>
                         <div class="content-hover-appearing">
-                            <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
-                                للمنتدى الدولي للاتصال الحكومي 2024،</p>
+                            <p class="text-base text-white">The United Arab Emirates University launched the “University Challenge 2024” as a proactive initiative
+For the International Government Communication Forum 2024,</p>
                         </div>
                     </div>
                 </div>
             </a>
               <a href="news-content.html" class="swiper-slide">
                 <div class="news mx-auto relative w-[70%] h-[500px]" style="background-image: url(img/news3.jpg);background-repeat: no-repeat;background-size: cover;">
-                    <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                    <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                         <div class="content-appearing mb-10">
-                            <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                            <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                            <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                            <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                         </div>
                         <div class="content-hover-appearing">
-                            <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
-                                للمنتدى الدولي للاتصال الحكومي 2024،</p>
+                            <p class="text-base text-white">The United Arab Emirates University launched the “University Challenge 2024” as a proactive initiative
+For the International Government Communication Forum 2024,</p>
                         </div>
                     </div>
                 </div>
             </a>
               <a href="news.html" class="swiper-slide">
                 <div class="news mx-auto relative w-[70%] h-[500px]" style="background-image: url(img/news2.jpg);background-repeat: no-repeat;background-size: cover;">
-                    <div class="news-content absolute bottom-0 text-right bg-site-green p-2">
+                    <div class="news-content absolute bottom-0 text-left bg-site-green p-2">
                         <div class="content-appearing mb-10">
-                            <span class="text-lg text-white">03&nbsp;سبتمبر&nbsp;2024</span>
-                            <p class="text-base text-white my-2">جامعة الإمارات تطلق "تحدي الجامعات 2024" لتعزيز الابتكار في الاتصال الحكومي</p>
+                            <span class="text-lg text-white">03&nbsp;Sep&nbsp;2024</span>
+                            <p class="text-base text-white my-2">The UAE University launches the “University Challenge 2024” to promote innovation in government communication</p>
                         </div>
                         <div class="content-hover-appearing">
-                            <p class="text-base text-white">أطلقت جامعة الإمارات العربية المتحدة "تحدي الجامعات 2024"، ضمن الفعاليات الاستباقية
-                                للمنتدى الدولي للاتصال الحكومي 2024،</p>
+                            <p class="text-base text-white">The United Arab Emirates University launched the “University Challenge 2024” as a proactive initiative
+For the International Government Communication Forum 2024,</p>
                         </div>
                     </div>
                 </div>
@@ -509,7 +509,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                     </svg>
                     <h1 class="text-6xl md:text-5xl sm:text-4xl font-bold">#110</h1> 
-                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">Faculty members</h1> 
                 </div>
               </div>
               <div class="swiper-slide">
@@ -518,7 +518,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                     </svg>
                     <h1 class="text-6xl md:text-5xl sm:text-4xl font-bold">#110</h1> 
-                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">Faculty members</h1> 
                 </div>
               </div>
               <div class="swiper-slide">
@@ -527,7 +527,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                     </svg>
                     <h1 class="text-6xl md:text-5xl sm:text-4xl font-bold">#110</h1> 
-                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">Faculty members</h1> 
                 </div>
               </div>
               <div class="swiper-slide">
@@ -536,7 +536,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                     </svg>
                     <h1 class="text-6xl md:text-5xl sm:text-4xl font-bold">#110</h1> 
-                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">Faculty members</h1> 
                 </div>
               </div>
               <div class="swiper-slide">
@@ -545,7 +545,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                     </svg>
                     <h1 class="text-6xl md:text-5xl sm:text-4xl font-bold">#110</h1> 
-                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">Faculty members</h1> 
                 </div>
               </div>
               <div class="swiper-slide">
@@ -554,7 +554,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                     </svg>
                     <h1 class="text-6xl md:text-5xl sm:text-4xl font-bold">#110</h1> 
-                    <h1 class="text-2xl md:text-base sm:text-sm text-center">اعضاء هيئة التدريس</h1> 
+                    <h1 class="text-2xl md:text-base sm:text-sm text-center">Faculty members</h1> 
                 </div>
               </div>
 
@@ -564,82 +564,82 @@
     <section class="research-section lg:h-[80vh] my-10 flex lg:flex-row flex-col-reverse gap-3">
         <div class="research-images-container flex lg:flex-row flex-col lg:w-3/5 w-[90%]">
             <div class="research-image relative lg:w-[33.33%] w-full lg:h-full h-[80vh]"  style="background-image: url(img/research1.jpg);background-repeat: no-repeat;background-size: cover;">
-                <div class="research-content absolute bottom-[30%] text-right p-4 text-white">
-                    <h1 class="text-2xl font-bold mb-6">التعاون البحثي</h1>
-                    <p class="text-lg font-medium">تعزز جامعة الإمارات العربية المتحدة إلى التعاون البحثي مع الجهات الحكومية والمؤسسات
-                        الأكاديمية والشركات، وذلك على الصعيدين المحلي والدولي.</p>
+                <div class="research-content absolute bottom-[30%] text-left p-4 text-white">
+                    <h1 class="text-2xl font-bold mb-6">Research collaboration</h1>
+                    <p class="text-lg font-medium">The United Arab Emirates University promotes research cooperation with government agencies and institutions
+Academy and companies, both locally and internationally.</p>
                 </div>
             </div>
             <div class="research-image relative lg:w-[33.33%] w-full lg:h-full h-[80vh]"  style="background-image: url(img/research2.jpg);background-repeat: no-repeat;background-size: cover;">
-                <div class="research-content absolute bottom-[30%] text-right p-4 text-white">
-                    <h1 class="text-2xl font-bold mb-6">التعاون البحثي</h1>
-                    <p class="text-lg font-medium">تعزز جامعة الإمارات العربية المتحدة إلى التعاون البحثي مع الجهات الحكومية والمؤسسات
-                        الأكاديمية والشركات، وذلك على الصعيدين المحلي والدولي.</p>
+                <div class="research-content absolute bottom-[30%] text-left p-4 text-white">
+                    <h1 class="text-2xl font-bold mb-6">Research collaboration</h1>
+                    <p class="text-lg font-medium">The United Arab Emirates University promotes research cooperation with government agencies and institutions
+Academy and companies, both locally and internationally.</p>
                 </div>
             </div>
             <div class="research-image relative lg:w-[33.33%] w-full lg:h-full h-[80vh]"  style="background-image: url(img/research3.jpg);background-repeat: no-repeat;background-size: cover;">
-                <div class="research-content absolute bottom-[30%] text-right p-4 text-white">
-                    <h1 class="text-2xl font-bold mb-6">التعاون البحثي</h1>
-                    <p class="text-lg font-medium">تعزز جامعة الإمارات العربية المتحدة إلى التعاون البحثي مع الجهات الحكومية والمؤسسات
-                        الأكاديمية والشركات، وذلك على الصعيدين المحلي والدولي.</p>
+                <div class="research-content absolute bottom-[30%] text-left p-4 text-white">
+                    <h1 class="text-2xl font-bold mb-6">Research collaboration</h1>
+                    <p class="text-lg font-medium">The United Arab Emirates University promotes research cooperation with government agencies and institutions
+Academy and companies, both locally and internationally.</p>
                 </div>
             </div>
         </div>
-        <div class="research-content text-right lg:w-2/5 w-full lg:mt-32 lg:pr-20 lg:pl-4 px-8 py-6">
-            <h1 class="text-4xl font-bold text-site-brown mb-5">الأبحاث</h1>
-            <p class="text-lg font-medium text-site-light-green">تهدف أبحاث جامعة الإمارات إلى إيجاد حلول مبتكرة ومستدامة للعديد من التحديات التي تواجه دولة الإمارات ودول المنطقة والعالم. وتولي دولة الامارات اهتماماً استراتيجياً لسبع مجالات أساسية هي: الطاقة المتجددة، والمواصلات، والتعليم، والصحة، والتقنيات، ومصادر المياه، واكتشاف الفضاء</p>
+        <div class="research-content text-left lg:w-2/5 w-full lg:mt-32 lg:pr-20 lg:pl-4 px-8 py-6">
+            <h1 class="text-4xl font-bold text-site-brown mb-5">Research</h1>
+            <p class="text-lg font-medium text-site-light-green">UAEU research aims to find innovative and sustainable solutions to many challenges facing the UAE, the countries of the region and the world. The UAE pays strategic attention to seven basic areas: renewable energy, transportation, education, health, technologies, water sources, and space exploration.</p>
         </div>
     </section>
     <section class="testomonial-section lg:h-[80vh] lg:px-0 px-5  my-10 flex lg:flex-row  justify-center items-center flex-col-reverse gap-3">
-        <div class="content-container bg-site-green p-24 sm:p-12 text-right text-white lg:h-[90%] lg:w-[55%] w-full lg:translate-x-12 z-[2]">
-            <h1 class="text-4xl font-bold mb-10">عمادة المكتبات</h1>
-            <p class="text-xl">ضم جامعة الإمارات العربية المتحدة حاليا اثنتين من ابرز المكتبات  وهما المكتبة الرئيسية والمكتبة الطبية الوطنية. وتعتبر المكتبات بوابة الحصول على مجموعة واسعة من المصادر والخدمات مجتمعة لدعم التعلم والتدريس والبحث العلمي في المجتمع الجامعي.
+        <div class="content-container bg-site-green p-24 sm:p-12 text-left text-white lg:h-[90%] lg:w-[55%] w-full lg:-translate-x-12 z-[2]">
+            <h1 class="text-4xl font-bold mb-10">Deanship of Libraries</h1>
+            <p class="text-xl">The United Arab Emirates University currently includes two of the most prominent libraries, the main library and the national medical library. Libraries are considered the gateway to a wide range of resources and services combined to support learning, teaching and scientific research in the university community.
             </p>
         </div>
-        <div class="img-container lg:h-full h-[60vh]  lg:w-[33%] w-full lg:-translate-x-12" style="background-image: url(img/testimoni.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
+        <div class="img-container lg:h-full h-[60vh]  lg:w-[33%] w-full lg:translate-x-12" style="background-image: url(img/testimoni.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
 
         </div>
     </section>
-    <h1 class="text-4xl font-bold text-center text-site-brown my-10">تسليط الضوء على</h1>
+    <h1 class="text-4xl font-bold text-center text-site-brown my-10">Highlight</h1>
     <section class="members-section lg:h-screen flex lg:flex-row flex-col justify-center gap-5 px-10">
         <div class="img-container lg:h-[80%] h-screen lg:w-[30%] w-full relative" style="background-image: url(img/members1.jpg);background-repeat: no-repeat;background-size: cover">
-            <div class="members-content absolute text-site-green text-right">
-                <h1 class="text-xl font-bold mb-3">أ. د. ساجد مقصود</h1>
-                <p class="text-lg font-bold mb-3">الزراعة والطب البيطري
+            <div class="members-content absolute text-site-green text-left">
+                <h1 class="text-xl font-bold mb-3">A. D. Sajid Maqsood</h1>
+                <p class="text-lg font-bold mb-3">Agriculture and veterinary medicine
                 </p>
-                <p class="mb-5">يعمل الاستاذ الدكتور ساجد في قسم علم الأغذية في كلية الزراعة والطب البيطري، في جامعة الإمارات العربية المتحدة
+                <p class="mb-5">Professor Dr. Sajid works in the Department of Food Science at the College of Agriculture and Veterinary Medicine, at the United Arab Emirates University
                 </p>
                 <a href="" class="members-show-more ml-auto h-12 -translate-x-[50px] bg-site-brown text-white flex justify-end items-center p-2 pr-5">
-                    <p class="font-medium">عرض المزيد</p>
+                    <p class="font-medium">Show more</p>
                 </a>
             </div>
         </div>
         <div class="img-container lg:h-[80%] h-screen lg:w-[30%] w-full relative" style="background-image: url(img/members2.jpg);background-repeat: no-repeat;background-size: cover">
-            <div class="members-content absolute text-site-green text-right">
-                <h1 class="text-xl font-bold mb-3">أ. د. ساجد مقصود</h1>
-                <p class="text-lg font-bold mb-3">الزراعة والطب البيطري
+            <div class="members-content absolute text-site-green text-left">
+                <h1 class="text-xl font-bold mb-3">A. D. Sajid Maqsood</h1>
+                <p class="text-lg font-bold mb-3">Agriculture and veterinary medicine
                 </p>
-                <p class="mb-5">يعمل الاستاذ الدكتور ساجد في قسم علم الأغذية في كلية الزراعة والطب البيطري، في جامعة الإمارات العربية المتحدة
+                <p class="mb-5">Professor Dr. Sajid works in the Department of Food Science at the College of Agriculture and Veterinary Medicine, at the United Arab Emirates University
                 </p>
                 <a href="" class="members-show-more ml-auto h-12 -translate-x-[50px] bg-site-brown text-white flex justify-end items-center p-2 pr-5">
-                    <p class="font-medium">عرض المزيد</p>
+                    <p class="font-medium">Show more</p>
                 </a>
             </div>
         </div>
         <div class="img-container lg:h-[80%] h-screen lg:w-[30%] w-full relative" style="background-image: url(img/members3.jpg);background-repeat: no-repeat;background-size: cover">
-            <div class="members-content absolute text-site-green text-right">
-                <h1 class="text-xl font-bold mb-3">أ. د. ساجد مقصود</h1>
-                <p class="text-lg font-bold mb-3">الزراعة والطب البيطري
+            <div class="members-content absolute text-site-green text-left">
+                <h1 class="text-xl font-bold mb-3">A. D. Sajid Maqsood</h1>
+                <p class="text-lg font-bold mb-3">Agriculture and veterinary medicine
                 </p>
-                <p class="mb-5">يعمل الاستاذ الدكتور ساجد في قسم علم الأغذية في كلية الزراعة والطب البيطري، في جامعة الإمارات العربية المتحدة
+                <p class="mb-5">Professor Dr. Sajid works in the Department of Food Science at the College of Agriculture and Veterinary Medicine, at the United Arab Emirates University
                 </p>
                 <a href="" class="members-show-more ml-auto h-12 -translate-x-[50px] bg-site-brown text-white flex justify-end items-center p-2 pr-5">
-                    <p class="font-medium">عرض المزيد</p>
+                    <p class="font-medium">Show more</p>
                 </a>
             </div>
         </div>
     </section>
-    <h1 class="text-4xl font-bold text-center text-site-brown my-10">شبكات التواصل الاجتماعي</h1>
+    <h1 class="text-4xl font-bold text-center text-site-brown my-10">Social media</h1>
     <section class="scoial-media-section flex flex-wrap justify-center px-16 mb-10">
         <div class="scoial-media-square w-72 h-72 relative">
             <img src="img/members1.jpg" alt="" class="w-full h-full">
@@ -648,7 +648,7 @@
             </div>
             <div class="section-hover-appearing absolute top-0 w-full h-full p-8 opacity-0 hover:opacity-100 transition-all bg-white">
                 <h1 class="text-xl font-bold text-center mb-3 mt-10">UAEnews</h1>
-                <p class="text-right">ركز ملتقى الشركاء الاستراتيجيين لجامعة الإمارات على مناقشة تحديات وفرص سوق العمل المستقبلي وتأثير التكنولوجيا وأهمية تطوير المهارات المطلوبة لدعم النمو الاقتصادي والابتكار</p>
+                <p class="text-left">The UAEU Strategic Partners Forum focused on discussing the challenges and opportunities of the future labor market, the impact of technology, and the importance of developing the skills required to support economic growth and innovation.</p>
             </div>
         </div>
         <div class="scoial-media-square w-72 h-72 relative">
@@ -658,7 +658,7 @@
             </div>
             <div class="section-hover-appearing absolute top-0 w-full h-full p-8 opacity-0 hover:opacity-100 transition-all bg-white">
                 <h1 class="text-xl font-bold text-center mb-3 mt-10">UAEnews</h1>
-                <p class="text-right">ركز ملتقى الشركاء الاستراتيجيين لجامعة الإمارات على مناقشة تحديات وفرص سوق العمل المستقبلي وتأثير التكنولوجيا وأهمية تطوير المهارات المطلوبة لدعم النمو الاقتصادي والابتكار</p>
+                <p class="text-left">The UAEU Strategic Partners Forum focused on discussing the challenges and opportunities of the future labor market, the impact of technology, and the importance of developing the skills required to support economic growth and innovation.</p>
             </div>
         </div>
         <div class="scoial-media-square w-72 h-72 relative">
@@ -668,7 +668,7 @@
             </div>
             <div class="section-hover-appearing absolute top-0 w-full h-full p-8 opacity-0 hover:opacity-100 transition-all bg-white">
                 <h1 class="text-xl font-bold text-center mb-3 mt-10">UAEnews</h1>
-                <p class="text-right">ركز ملتقى الشركاء الاستراتيجيين لجامعة الإمارات على مناقشة تحديات وفرص سوق العمل المستقبلي وتأثير التكنولوجيا وأهمية تطوير المهارات المطلوبة لدعم النمو الاقتصادي والابتكار</p>
+                <p class="text-left">The UAEU Strategic Partners Forum focused on discussing the challenges and opportunities of the future labor market, the impact of technology, and the importance of developing the skills required to support economic growth and innovation.</p>
             </div>
         </div>
         <div class="scoial-media-square w-72 h-72 relative">
@@ -678,7 +678,7 @@
             </div>
             <div class="section-hover-appearing absolute top-0 w-full h-full p-8 opacity-0 hover:opacity-100 transition-all bg-white">
                 <h1 class="text-xl font-bold text-center mb-3 mt-10">UAEnews</h1>
-                <p class="text-right">ركز ملتقى الشركاء الاستراتيجيين لجامعة الإمارات على مناقشة تحديات وفرص سوق العمل المستقبلي وتأثير التكنولوجيا وأهمية تطوير المهارات المطلوبة لدعم النمو الاقتصادي والابتكار</p>
+                <p class="text-left">The UAEU Strategic Partners Forum focused on discussing the challenges and opportunities of the future labor market, the impact of technology, and the importance of developing the skills required to support economic growth and innovation.</p>
             </div>
         </div>
         <div class="scoial-media-square w-72 h-72 relative">
@@ -688,7 +688,7 @@
             </div>
             <div class="section-hover-appearing absolute top-0 w-full h-full p-8 opacity-0 hover:opacity-100 transition-all bg-white">
                 <h1 class="text-xl font-bold text-center mb-3 mt-10">UAEnews</h1>
-                <p class="text-right">ركز ملتقى الشركاء الاستراتيجيين لجامعة الإمارات على مناقشة تحديات وفرص سوق العمل المستقبلي وتأثير التكنولوجيا وأهمية تطوير المهارات المطلوبة لدعم النمو الاقتصادي والابتكار</p>
+                <p class="text-left">The UAEU Strategic Partners Forum focused on discussing the challenges and opportunities of the future labor market, the impact of technology, and the importance of developing the skills required to support economic growth and innovation.</p>
             </div>
         </div>
         <div class="scoial-media-square w-72 h-72 relative">
@@ -698,7 +698,7 @@
             </div>
             <div class="section-hover-appearing absolute top-0 w-full h-full p-8 opacity-0 hover:opacity-100 transition-all bg-white">
                 <h1 class="text-xl font-bold text-center mb-3 mt-10">UAEnews</h1>
-                <p class="text-right">ركز ملتقى الشركاء الاستراتيجيين لجامعة الإمارات على مناقشة تحديات وفرص سوق العمل المستقبلي وتأثير التكنولوجيا وأهمية تطوير المهارات المطلوبة لدعم النمو الاقتصادي والابتكار</p>
+                <p class="text-left">The UAEU Strategic Partners Forum focused on discussing the challenges and opportunities of the future labor market, the impact of technology, and the importance of developing the skills required to support economic growth and innovation.</p>
             </div>
         </div>
         <div class="scoial-media-square w-72 h-72 relative">
@@ -708,7 +708,7 @@
             </div>
             <div class="section-hover-appearing absolute top-0 w-full h-full p-8 opacity-0 hover:opacity-100 transition-all bg-white">
                 <h1 class="text-xl font-bold text-center mb-3 mt-10">UAEnews</h1>
-                <p class="text-right">ركز ملتقى الشركاء الاستراتيجيين لجامعة الإمارات على مناقشة تحديات وفرص سوق العمل المستقبلي وتأثير التكنولوجيا وأهمية تطوير المهارات المطلوبة لدعم النمو الاقتصادي والابتكار</p>
+                <p class="text-left">The UAEU Strategic Partners Forum focused on discussing the challenges and opportunities of the future labor market, the impact of technology, and the importance of developing the skills required to support economic growth and innovation.</p>
             </div>
         </div>
         <div class="scoial-media-square w-72 h-72 relative">
@@ -718,33 +718,12 @@
             </div>
             <div class="section-hover-appearing absolute top-0 w-full h-full p-8 opacity-0 hover:opacity-100 transition-all bg-white">
                 <h1 class="text-xl font-bold text-center mb-3 mt-10">UAEnews</h1>
-                <p class="text-right">ركز ملتقى الشركاء الاستراتيجيين لجامعة الإمارات على مناقشة تحديات وفرص سوق العمل المستقبلي وتأثير التكنولوجيا وأهمية تطوير المهارات المطلوبة لدعم النمو الاقتصادي والابتكار</p>
+                <p class="text-left">The UAEU Strategic Partners Forum focused on discussing the challenges and opportunities of the future labor market, the impact of technology, and the importance of developing the skills required to support economic growth and innovation.</p>
             </div>
         </div>
     </section>
-<!--     <footer class="bg-site-footer lg:px-32 px-8 py-10 mt-10 ">
-        <div class="footer-links-container flex lg:flex-row flex-col gap-8 justify-evenly items-start lg:items-center">
-          <a href="" class="text-white">للتقديم</a>
-          <div class="w-px h-3 bg-white hidden lg:block"></div>
-          <a href="" class="text-white">عن المعهد</a>
-          <div class="w-px h-3 bg-white hidden lg:block"></div>
-          <a href="" class="text-white">المركز الإعلامي</a>
-          <div class="w-px h-3 bg-white hidden lg:block"></div>
-          <a href="" class="text-white">المنشورات</a>
-          <div class="w-px h-3 bg-white hidden lg:block"></div>
-          <a href="" class="text-white">حياة المعهد</a>
-          <div class="w-px h-3 bg-white hidden lg:block"></div>
-          <a href="" class="text-white">الأنظمة</a>
-        </div>
-        <div class="google-map mx-auto mt-8 lg:w-1/2 w-full h-96">
-            <iframe class="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-       </div>
-        <div class="footer-logo-container mt-10">
-          <img src="img/logo.png" alt="logo" style="filter: drop-shadow(2px 1px 1px rgba(0 0 0 / 70%)) brightness(1.5)" class="w-36 mx-auto">
-        </div>
-        <p class="text-white text-sm text-center my-5">All rights reserved © Rushed</p>
-    </footer> -->
-    <footer class="footer bg-site-footer text-white py-2 relative overflow-hidden" style="direction: rtl;">
+
+    <footer class="footer bg-site-footer text-white py-2 relative overflow-hidden" style="direction: ltr;">
         <div class="container">
           <div class="absolute top-0 end-0 pe-5 z-10">
             <svg class="me-5" width="514" height="254" viewBox="0 0 514 254" fill="#814d1d" fill-opacity=".04" xmlns="http://www.w3.org/2000/svg">
@@ -766,7 +745,7 @@
                   <img width="200" src="img/logo-white.png">
                 </span>
               </a>
-              <p class="text-sm pb-2 mb-3">إضافة جديدة ومتميزة للوسط الأكاديمي ومنبع للراغبين بدراسة فنون وعلوم الديانة الإسلامية تحت راية الوسطية الشرعية والاعتدال الواعي.</p>
+              <p class="text-sm pb-2 mb-3">A new and distinguished addition to the academic community and a source for those wishing to study the arts and sciences of the Islamic religion under the banner of legal moderation and conscious moderation.</p>
               <div class="flex gap-3">
                 <a class="rounded-full" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 32 32"><path d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z"></path></svg>
@@ -781,36 +760,36 @@
             </div>
             <div class="w-[70%] sm:w-full flex sm:flex-col justify-end text-lg">
                 <div class="mb-4 w-1/4 sm:w-full">
-                  <h4 class="font-bold pb-5">الروابط الهامة</h4>
+                  <h4 class="font-bold pb-5">Important links</h4>
                   <ul class="nav flex flex-col gap-2">
-                    <li><a class="nav-link" href="#">الرئيسية</a></li>
-                    <li><a class="nav-link" href="#">الأقسام</a></li>
-                    <li><a class="nav-link" href="#">المدونة</a></li>
-                    <li><a class="nav-link" href="#">من نحن</a></li>
+                    <li><a class="nav-link" href="#">Home</a></li>
+                    <li><a class="nav-link" href="#">Sections</a></li>
+                    <li><a class="nav-link" href="#">Blog</a></li>
+                    <li><a class="nav-link" href="#">Who are we?</a></li>
                   </ul>
                 </div>
                 <div class="mb-4 w-1/4 sm:w-full">
-                  <h4 class="font-bold pb-5">الروابط الهامة</h4>
+                  <h4 class="font-bold pb-5">Important links</h4>
                   <ul class="nav flex flex-col gap-2">
-                    <li><a class="nav-link" href="#">الرئيسية</a></li>
-                    <li><a class="nav-link" href="#">الأقسام</a></li>
-                    <li><a class="nav-link" href="#">المدونة</a></li>
-                    <li><a class="nav-link" href="#">من نحن</a></li>
+                    <li><a class="nav-link" href="#">Home</a></li>
+                    <li><a class="nav-link" href="#">Sections</a></li>
+                    <li><a class="nav-link" href="#">Blog</a></li>
+                    <li><a class="nav-link" href="#">Who are we?</a></li>
                   </ul>
                 </div>
                 <div class="mb-4 w-1/4 sm:w-full">
-                  <h4 class="font-bold pb-5">الروابط الهامة</h4>
+                  <h4 class="font-bold pb-5">Important links</h4>
                   <ul class="nav flex flex-col gap-2">
-                    <li><a class="nav-link" href="#">الرئيسية</a></li>
-                    <li><a class="nav-link" href="#">الأقسام</a></li>
-                    <li><a class="nav-link" href="#">المدونة</a></li>
-                    <li><a class="nav-link" href="#">من نحن</a></li>
+                    <li><a class="nav-link" href="#">Home</a></li>
+                    <li><a class="nav-link" href="#">Sections</a></li>
+                    <li><a class="nav-link" href="#">Blog</a></li>
+                    <li><a class="nav-link" href="#">Who are we?</a></li>
                   </ul>
                 </div>
             </div>
           </div>
           <p class="nav fs-sm mb-0">
-            <span class="text-body-secondary">جميع الحقوق محفوظة لدى <strong> معهد الرشد بتريم</strong> &copy;</span>
+            <span class="text-body-secondary">All rights reserved to<strong> Al Rushd Institute in Tarim</strong> &copy;</span>
           </p>
         </div>
       </footer>

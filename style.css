@@ -40,7 +40,7 @@
       font-style: normal;
     }
     #accessibility-sidebar {
-      transition-property: left;
+      transition-property: right;
       transition-duration: 0.4s;
   }
     #main-menu {
