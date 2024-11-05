@@ -3,8 +3,8 @@ tailwind.config = {
     theme: {
         extend: {
             colors:{
-            "site-green": "#075210",
-            "site-light-green": "#3aa636",
+            "site-green": "#0E6050",
+            "site-light-green": "#71B73B",
             "site-brown": "#32140a",
             "site-footer": "#162735",
             }

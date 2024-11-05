@@ -125,7 +125,7 @@
 /* change nav color wwhen scroll */
 @supports not (animation-timeline: scroll()) {
   nav {
-    background: #3aa636;
+    background: #71B73B;
   }
 }
 @supports (animation-timeline: scroll()) { 
@@ -142,7 +142,7 @@
       background: none;
     }
     to {
-      background: #3aa636;
+      background: #71B73B;
     }
   }
 }
@@ -161,7 +161,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #3aa636 !important;
+  background-color: #71B73B !important;
   width: 50px !important;
   transition-property: width;
   transition-duration: 0.4s;
@@ -177,7 +177,7 @@
   transition-property: opacity transform;
 }
 .hero-overlay {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #075210 105%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #0E6050 105%);
 }
 .hero-section-hovered1 {
   padding: 0;
@@ -200,7 +200,7 @@
   transition-duration: 0.6s;
 }
 .news:hover .news-content {
-  background-color:#075210a2 ;
+  background-color:#0E6050a2 ;
   height: 80%;
 }
 .content-hover-appearing {
@@ -212,7 +212,7 @@
   opacity: 1;
 }
 .swiper-button-prev,.swiper-button-next {
-  background-color: #075210 !important;
+  background-color: #0E6050 !important;
   color: white !important;
   width: 2rem !important;
   height: 2rem !important;
