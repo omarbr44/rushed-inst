@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معهد الرشد بتريم</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+    <style>
+        .dz-preview  {
+            position: absolute !important;
+            right: 0 !important;
+            top: 110% !important;
+        }
+        .dz-success-mark, .dz-error-mark {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden" style="font-family: Tajawal, sans-serif;">
+    <nav class="w-full fixed top-0 z-30" 
+    >
+    <div class="first-nav px-5 flex justify-between mb-2 text-white">
+        <div class="flex gap-5 sm:gap-2 items-center">
+            <button onclick="showHidemainMenu()" class="main-menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                  </svg>
+            </button>
+            <button class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>  
+            </button>
+            <div class="accessibility" style="line-height: 0;">
+                <button onclick="showHideSideBar()" class="accessibility-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd" />
+                      </svg>                      
+                </button>
+                <div id="accessibility-sidebar" style="line-height: normal;" class="fixed top-0 -left-[120%] h-screen w-80 sm:w-full pt-10 px-8 mb-5 bg-white text-black">
+                    <h2 class="text-right mb-4 text-2xl text-bold">تخصيص</h2>
+                    <div class="flex justify-between items-center mb-8">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                          </svg>
+                        </div>
+                        <div class="font-sizes-container flex items-end gap-3">
+                            <span class="text-2xl font-semibold">A</span>
+                            <div class="w-px h-4 bg-black"></div>
+                            <span class="text-lg">A</span>
+                            <div class="w-px h-4 bg-black"></div>
+                            <span class="text-sm">A</span>
+                        </div>
+                        <button onclick="showHideSideBar()"  class="px-3 py-1 rounded-3xl bg-red-500 text-red-950 translate-x-11">X</button>
+                    </div>
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="checkbox-wrapper-6">
+                            <input class="tgl tgl-light" id="cb1-6" type="checkbox"/>
+                            <label class="tgl-btn" for="cb1-6">
+                          </div>
+                        <div class="text-xl">القراءة الليلية</div>
+                    </div>
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                              </svg>                              
+                          </div>
+                        <div class="text-xl">جولة في الموقع</div>
+                    </div>
+                    <div class="flex justify-between flex-col mb-8">
+                        <div class="self-end text-xl">الموقع باللغة</div>
+                        <div class="self-start">
+                          <span class="border-r border-black pr-1">English</span>
+                          <span class="">English</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between flex-col mb-8">
+                        <div class="self-end text-xl">ترجمة هذه الصفحة</div>
+                        <div class="self-start">
+                          <span class="">English</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-right">معهد الرشد غير مسؤولة عن نتائج الترجمة الفورية الموفرة من جوجل</p>
+                    </div>
+                </div>
+            </div>         
+            <button class="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                  </svg>                  
+            </button>
+            <div class="lang-container">
+                <select name="lang" id="lang-select" onchange="location = this.value;" class="py-2 px-8 sm:px-2 sm:text-sm border-white border rounded-md" style="background: none;">
+                    <option class="text-black" value="arabic">العربية</option>
+                    <option class="text-black" value="BAHASA">BAHASA</option>
+                    <option class="text-black" value="index-en.html">English</option>
+                </select>
+            </div>
+        </div>
+        <div class="">
+         <a href="" class="">
+             <img src="img/logo.png" alt="logo" 
+                  style="filter: drop-shadow(2px 1px 1px rgba(0 0 0 / 70%)) brightness(1.5)" class="w-32 sm:w-28 p-1"
+             >
+         </a>
+        </div>
+    </div>
+    <div class="sec-nav px-5 flex gap-10 sm:gap-5 py-3 justify-center lg:justify-start text-white" style="background: rgba(0, 0, 0, 0.226);">
+        <div class="flex sm:flex-col-reverse items-center gap-2">
+            <a href="" class="text-center sm:text-sm">
+            اتصل بنا
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 sm:size-5">
+                <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 0 0-1.032-.211 50.89 50.89 0 0 0-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 0 0 2.433 3.984L7.28 21.53A.75.75 0 0 1 6 21v-4.03a48.527 48.527 0 0 1-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979Z" />
+                <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 0 0 1.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0 0 15.75 7.5Z" />
+            </svg>
+        </div>
+        <div class="flex gap-2 sm:flex-col-reverse items-center">
+            <a href="" class="text-center sm:text-sm">
+            الاسئلة الشائعة
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>              
+        </div>
+        <div class="flex gap-2 sm:flex-col-reverse items-center">
+            <a href="" class="text-center sm:text-sm">
+            المشاركة الرقمية
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+              </svg>                            
+        </div>
+        <div class="flex gap-2 sm:flex-col-reverse items-center">
+            <a href="" class="text-center sm:text-sm">
+            البيانات المفتوحة
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+            </svg>                                         
+        </div>
+    </div>
+    </nav>
+    <section id="main-menu" class="h-screen fixed top-0 z-20 w-full bg-black opacity-80 -right-[120%] py-5 lg:px-36 md:px-20 sm:px-10">
+        <div class="main-menu-header flex justify-between text-white mb-8">
+            <button onclick="showHidemainMenu()" class="w-9 h-9 text-lg border rounded-3xl">x</button>
+            <a href="" class="bg-white p-2">
+                <img src="img/logo.png" alt="logo" width="180">
+            </a>
+        </div>
+        <div class="main-menu-content flex gap-10 justify-end text-white text-right">
+            <div class="flex gap-4">
+                <div class="main-menu-subitems flex flex-col gap-2">
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الرئيسية</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">عن المعهد</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">القبول</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الشؤون التعليمية</a>
+                    <a href="" class="text-xl sm:text-base font-bold text-gray-700 hover:text-white transition-all">الأنظمة</a>                </div>
+                <div class="w-px bg-white"></div>
+            </div>
+            <div class="main-menu-items flex flex-col gap-4">
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الرئيسية</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">عن المعهد</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">القبول</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الشؤون التعليمية</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">الأنظمة</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">حياة المعهد</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">المنشورات</a>
+                <a href="" class="text-3xl sm:text-xl font-bold text-gray-700 hover:text-white transition-all">المركز الإعلامي</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="apply-secion my-64 lg:mx-20 mx-6 p-10 shadow-lg" style="direction: rtl;">
+        <div class="w-full flex justify-center sm:hidden">
+            <ol class="flex items-center w-1/2 mb-4 sm:mb-5">
+                <li class="flex w-full items-center text-site-green relative  after:content-[''] after:w-full after:h-1 after:border-b after:border-site-green after:border-4 after:inline-block">
+                    <div class="flex items-center justify-center w-10 h-10 bg-site-green rounded-full lg:h-12 lg:w-12 shrink-0">
+                    <span class="text-white text-3xl font-bold">1</span>
+                    </div>
+                    <p class=" absolute -bottom-20 -right-16 text-lg font-semibold pb-4 mb-8 text-site-green">المعلومات الشخصية</p>
+                </li>
+                <li class="flex w-full items-center text-site-green relative  after:content-[''] after:w-full after:h-1 after:border-b after:border-site-green after:border-4 after:inline-block">
+                    <div class="flex items-center justify-center w-10 h-10 bg-site-green rounded-full lg:h-12 lg:w-12 shrink-0">
+                    <span class="text-white text-3xl font-bold">2</span>
+                    </div>
+                    <p class=" absolute -bottom-20 -right-12 text-lg font-semibold pb-4 mb-8 text-site-green">البيانات الشخصية</p>
+                </li>
+                <li class="flex w-full items-center text-site-green relative">
+                    <div class="flex items-center justify-center w-10 h-10 bg-site-green rounded-full lg:h-12 lg:w-12 shrink-0">
+                    <span class="text-white text-3xl font-bold">3</span>
+                    </div>
+                    <p class=" absolute -bottom-20 -right-5 text-lg font-semibold pb-4 mb-8 text-site-green">إثبات الهوية</p>
+                </li>
+            </ol>
+        </div>
+        <div class="pb-4 my-20">
+            <div class="flex lg:flex-row flex-col  gap-4 w-full items-start">
+                <div class="lg:w-[100%] w-full">
+                    <div class="flex w-full items-center gap-5 flex-wrap gap-y-8 mb-10 pb-10 border-b">
+                        <div class="lg:w-[45%] w-full">
+                            <label class="block mb-2 font-semibold text-site-green">نوع وثيقة اثبات الهوية</label>
+                            <select name="idtype" id="idtype" class="w-full p-2.5 rounded-lg border border-gray-600">
+                                <option value="">نوع وثيقة اثبات الهوية</option>
+                                <option value="">بطاقة شخصية</option>
+                                <option value="">بطاقة عائلية</option>
+                                <option value="">جواز عادي</option>
+                                <option value="">جواز دبلوماسي</option>
+                                <option value="">شهادة ميلاد</option>
+                            </select>
+                        </div>
+                        <div class="lg:w-[45%] w-full">
+                            <label class="block mb-2 font-semibold text-site-green">رقم وثيقة اثبات الهوية</label>
+                            <input 
+                            type="text"
+                            placeholder="رقم وثيقة اثبات الهوية"
+                            class="w-full p-2.5 rounded-lg border border-gray-600">
+                        </div>
+                        <div class="lg:w-[45%] w-full">
+                            <label class="block mb-2 font-semibold text-site-green">محل الإصدار</label>
+                            <input 
+                            type="text"
+                            placeholder="محل الإصدار"
+                            class="w-full p-2.5 rounded-lg border border-gray-600">
+                        </div>
+                        <div class="lg:w-[45%] w-full">
+                            <label class="block mb-2 font-semibold text-site-green">تاريخ الإصدار</label>
+                            <input 
+                            type="date"
+                            placeholder="تاريخ الإصدار"
+                            class="w-full p-2.5 rounded-lg border border-gray-600">
+                        </div>
+                        <div class="lg:w-[45%] w-full">
+                            <label class="block mb-2 font-semibold text-site-green">تاريخ الإنتهاء</label>
+                            <input 
+                            type="date"
+                            placeholder="تاريخ الإنتهاء"
+                            class="w-full p-2.5 rounded-lg border border-gray-600">
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full flex justify-end items-center gap-3">
+            <a href="apply-now2.html" class="bg-site-green p-2 text-white rounded-lg">الصفحة السابقة</a>
+            <a href="" class="bg-site-green p-2 text-white rounded-lg"> ارسال الاستمارة</a>
+        </div>
+    </section>
+
+
+    <footer class="footer bg-site-footer text-white py-2 relative overflow-hidden" style="direction: rtl;">
+        <div class="container">
+          <div class="absolute top-0 end-0 pe-5 z-10">
+            <svg class="me-5" width="514" height="254" viewBox="0 0 514 254" fill="#814d1d" fill-opacity=".04" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="257" cy="0.5" rx="257" ry="253.5"></ellipse>
+            </svg>
+          </div>         
+          <svg class="block absolute bottom-0 end-0 text-orange-500 opacity-10" style="transform: scaleX(-1);" width="140" height="86" viewBox="0 0 140 86" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.56155 84.728C3.89813 95.3168 8.77193 105.696 14.3618 114.354C31.1345 140.282 61.2598 159.203 93.1024 149.868C115.683 143.25 136.909 120.078 146.906 99.6379C157.262 78.4816 157.784 62.3169 149.314 40.7686C138.656 13.647 114.088 -10.3284 84.9291 4.90565C72.6616 11.3094 61.6112 19.2912 48.9043 25.2334C37.333 30.6501 22.7611 33.4689 12.9718 42.2129C0.148055 53.665 -1.80519 69.4006 1.56155 84.728Z"></path>
+          </svg>
+          <svg class="block absolute text-site-green opacity-10" style="left: 140px; bottom: 0px;" width="100" height="109" viewBox="0 0 100 109" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.0417 15.1485C18.7381 10.3806 25.7233 6.78779 32.3773 4.42805C52.3217 -2.62478 76.5803 -0.291377 89.9528 18.0914C99.436 31.1261 101.262 52.5761 98.137 67.8474C94.9071 83.6571 88.4295 92.6458 74.8221 100.795C57.6962 111.053 34.339 113.786 24.8896 93.3249C20.9119 84.7197 18.2546 75.7674 13.8455 67.2289C9.83276 59.4504 3.10546 51.8265 1.45115 42.988C-0.716922 31.4112 4.80452 22.0566 13.0417 15.1485Z"></path>
+          </svg>
+        </div>
+        <div class="p-12 md:p-8 sm:px-4" style="z-index: 2; position: sticky;">
+          <div class="flex sm:flex-col pb-5">
+            <div class="w-[30%] sm:w-full pb-2 mb-4">
+              <a class="navbar-brand py-0 mb-3" href="index.html">
+                <span class="text-white flex-shrink-0 me-2">
+                  <img width="150" src="img/logo-white.png">
+                </span>
+              </a>
+              <p class="text-sm pb-2 mb-3">إضافة جديدة ومتميزة للوسط الأكاديمي ومنبع للراغبين بدراسة فنون وعلوم الديانة الإسلامية تحت راية الوسطية الشرعية والاعتدال الواعي.</p>
+              <div class="flex gap-3">
+                <a class="rounded-3xl" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 32 32"><path d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z"></path></svg>
+                </a>
+                <a class="rounded-3xl" href="#" >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 32 32"><path d="M10.202,2.098c-1.49,.07-2.507,.308-3.396,.657-.92,.359-1.7,.84-2.477,1.619-.776,.779-1.254,1.56-1.61,2.481-.345,.891-.578,1.909-.644,3.4-.066,1.49-.08,1.97-.073,5.771s.024,4.278,.096,5.772c.071,1.489,.308,2.506,.657,3.396,.359,.92,.84,1.7,1.619,2.477,.779,.776,1.559,1.253,2.483,1.61,.89,.344,1.909,.579,3.399,.644,1.49,.065,1.97,.08,5.771,.073,3.801-.007,4.279-.024,5.773-.095s2.505-.309,3.395-.657c.92-.36,1.701-.84,2.477-1.62s1.254-1.561,1.609-2.483c.345-.89,.579-1.909,.644-3.398,.065-1.494,.081-1.971,.073-5.773s-.024-4.278-.095-5.771-.308-2.507-.657-3.397c-.36-.92-.84-1.7-1.619-2.477s-1.561-1.254-2.483-1.609c-.891-.345-1.909-.58-3.399-.644s-1.97-.081-5.772-.074-4.278,.024-5.771,.096m.164,25.309c-1.365-.059-2.106-.286-2.6-.476-.654-.252-1.12-.557-1.612-1.044s-.795-.955-1.05-1.608c-.192-.494-.423-1.234-.487-2.599-.069-1.475-.084-1.918-.092-5.656s.006-4.18,.071-5.656c.058-1.364,.286-2.106,.476-2.6,.252-.655,.556-1.12,1.044-1.612s.955-.795,1.608-1.05c.493-.193,1.234-.422,2.598-.487,1.476-.07,1.919-.084,5.656-.092,3.737-.008,4.181,.006,5.658,.071,1.364,.059,2.106,.285,2.599,.476,.654,.252,1.12,.555,1.612,1.044s.795,.954,1.051,1.609c.193,.492,.422,1.232,.486,2.597,.07,1.476,.086,1.919,.093,5.656,.007,3.737-.006,4.181-.071,5.656-.06,1.365-.286,2.106-.476,2.601-.252,.654-.556,1.12-1.045,1.612s-.955,.795-1.608,1.05c-.493,.192-1.234,.422-2.597,.487-1.476,.069-1.919,.084-5.657,.092s-4.18-.007-5.656-.071M21.779,8.517c.002,.928,.755,1.679,1.683,1.677s1.679-.755,1.677-1.683c-.002-.928-.755-1.679-1.683-1.677,0,0,0,0,0,0-.928,.002-1.678,.755-1.677,1.683m-12.967,7.496c.008,3.97,3.232,7.182,7.202,7.174s7.183-3.232,7.176-7.202c-.008-3.97-3.233-7.183-7.203-7.175s-7.182,3.233-7.174,7.203m2.522-.005c-.005-2.577,2.08-4.671,4.658-4.676,2.577-.005,4.671,2.08,4.676,4.658,.005,2.577-2.08,4.671-4.658,4.676-2.577,.005-4.671-2.079-4.676-4.656h0"></path></svg>
+                </a>
+                <a class="rounded-3xl" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 32 32"><path d="M30.893,22.837c-.208-.567-.606-.871-1.058-1.122-.085-.05-.163-.09-.23-.12-.135-.07-.273-.137-.41-.208-1.41-.747-2.51-1.69-3.274-2.808-.217-.315-.405-.648-.562-.996-.065-.186-.062-.292-.015-.389,.046-.074,.108-.138,.18-.188,.242-.16,.492-.323,.661-.432,.302-.195,.541-.35,.695-.46,.579-.405,.983-.835,1.236-1.315,.357-.672,.404-1.466,.13-2.175-.383-1.009-1.336-1.635-2.49-1.635-.243,0-.486,.025-.724,.077-.064,.014-.127,.028-.189,.044,.011-.69-.005-1.418-.066-2.135-.218-2.519-1.1-3.84-2.02-4.893-.589-.66-1.283-1.218-2.053-1.653-1.396-.797-2.979-1.202-4.704-1.202s-3.301,.405-4.698,1.202c-.773,.434-1.468,.994-2.057,1.656-.92,1.053-1.802,2.376-2.02,4.893-.061,.717-.077,1.449-.067,2.135-.062-.016-.125-.031-.189-.044-.238-.051-.481-.077-.724-.077-1.155,0-2.109,.626-2.491,1.635-.276,.71-.23,1.505,.126,2.178,.254,.481,.658,.911,1.237,1.315,.153,.107,.393,.262,.695,.46,.163,.106,.402,.261,.635,.415,.082,.053,.151,.123,.204,.205,.049,.1,.051,.208-.022,.408-.155,.341-.34,.668-.553,.976-.747,1.092-1.815,2.018-3.179,2.759-.723,.383-1.474,.639-1.791,1.502-.239,.651-.083,1.391,.525,2.015h0c.223,.233,.482,.429,.766,.58,.592,.326,1.222,.578,1.876,.75,.135,.035,.263,.092,.379,.169,.222,.194,.19,.486,.485,.914,.148,.221,.336,.412,.555,.564,.619,.428,1.315,.455,2.053,.483,.666,.025,1.421,.054,2.283,.339,.357,.118,.728,.346,1.158,.613,1.032,.635,2.446,1.503,4.811,1.503s3.789-.873,4.829-1.51c.427-.262,.796-.488,1.143-.603,.862-.285,1.617-.313,2.283-.339,.737-.028,1.433-.055,2.053-.483,.259-.181,.475-.416,.632-.69,.212-.361,.207-.613,.406-.789,.109-.074,.229-.129,.356-.162,.662-.173,1.301-.428,1.901-.757,.302-.162,.575-.375,.805-.63l.008-.009c.57-.61,.714-1.329,.48-1.964Zm-2.102,1.13c-1.282,.708-2.135,.632-2.798,1.059-.563,.363-.23,1.144-.639,1.426-.503,.347-1.989-.025-3.909,.609-1.584,.524-2.594,2.029-5.442,2.029s-3.835-1.502-5.444-2.033c-1.916-.634-3.406-.262-3.909-.609-.409-.282-.077-1.064-.639-1.426-.664-.427-1.516-.351-2.798-1.055-.816-.451-.353-.73-.081-.862,4.645-2.249,5.386-5.721,5.419-5.979,.04-.312,.084-.557-.259-.875-.332-.307-1.804-1.218-2.213-1.503-.676-.472-.973-.944-.754-1.523,.153-.401,.527-.552,.92-.552,.124,0,.248,.014,.369,.041,.742,.161,1.462,.533,1.879,.633,.05,.013,.102,.02,.153,.021,.222,0,.3-.112,.285-.366-.048-.812-.162-2.394-.034-3.872,.176-2.034,.831-3.042,1.61-3.934,.374-.428,2.132-2.286,5.493-2.286s5.123,1.85,5.497,2.276c.78,.891,1.436,1.899,1.61,3.934,.128,1.479,.018,3.061-.034,3.872-.018,.268,.063,.366,.285,.366,.052,0,.103-.008,.153-.021,.417-.1,1.137-.472,1.879-.633,.121-.027,.245-.041,.369-.041,.395,0,.766,.153,.92,.552,.219,.579-.077,1.051-.753,1.523-.409,.285-1.881,1.196-2.213,1.503-.344,.317-.299,.563-.259,.875,.033,.261,.773,3.734,5.419,5.979,.274,.137,.737,.416-.079,.871Z"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="lg:w-[70%] w-full sm:w-full flex sm:flex-col justify-end text-lg">
+                <div class="mb-4 w-1/4 sm:w-full">
+                  <h4 class="font-bold pb-5">الروابط الهامة</h4>
+                  <ul class="nav flex flex-col gap-2">
+                    <li><a class="nav-link" href="#">الرئيسية</a></li>
+                    <li><a class="nav-link" href="#">الأقسام</a></li>
+                    <li><a class="nav-link" href="#">المدونة</a></li>
+                    <li><a class="nav-link" href="#">من نحن</a></li>
+                  </ul>
+                </div>
+                <div class="mb-4 w-1/4 sm:w-full">
+                  <h4 class="font-bold pb-5">الروابط الهامة</h4>
+                  <ul class="nav flex flex-col gap-2">
+                    <li><a class="nav-link" href="#">الرئيسية</a></li>
+                    <li><a class="nav-link" href="#">الأقسام</a></li>
+                    <li><a class="nav-link" href="#">المدونة</a></li>
+                    <li><a class="nav-link" href="#">من نحن</a></li>
+                  </ul>
+                </div>
+                <div class="mb-4 w-1/4 sm:w-full">
+                  <h4 class="font-bold pb-5">الروابط الهامة</h4>
+                  <ul class="nav flex flex-col gap-2">
+                    <li><a class="nav-link" href="#">الرئيسية</a></li>
+                    <li><a class="nav-link" href="#">الأقسام</a></li>
+                    <li><a class="nav-link" href="#">المدونة</a></li>
+                    <li><a class="nav-link" href="#">من نحن</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+          <p class="nav fs-sm mb-0">
+            <span class="text-body-secondary">جميع الحقوق محفوظة لدى <strong> معهد الرشد بتريم</strong> &copy;</span>
+          </p>
+        </div>
+      </footer>
+</body>
+<script>
+ const fileInput = document.querySelector('#fileinput')
+ const peronalImage = document.querySelector('#peronalImage')
+
+ fileInput.addEventListener("change", changeImg);
+
+ const clickInput = () => {
+    fileInput.click()
+ }
+ function changeImg(e) {
+    const url = window.URL.createObjectURL(e.target.files[0]);
+    peronalImage.src = url
+    
+ }
+
+ let myDropzone = new Dropzone("div#dropzone", { url: "/file/post"});
+</script>
+</html>
